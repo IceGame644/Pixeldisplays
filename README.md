@@ -6,7 +6,7 @@ Repository for the **Pixeldisplays Diamondfire library**.
 ## Pipeline
 To start the pipeline, you can either generate image data on the fly, keeping separate lists to hold the **R**, **G**, **B**, and (optional) **alpha (A)** values for each display (4 displays per image).  
 
-After generating the R, G, B, and A lists, you must first **interlace** them using the `Interlace RGB` function. This transforms a single list of values (for example, R values) into 4 separate lists, each corresponding to the 4 text displays for the next step.  
+After generating the R, G, B, and A lists, you must first **interlace** them using the `InterlaceRGB` function. This transforms a single list of values (for example, R values) into 4 separate lists, each corresponding to the 4 text displays for the next step.  
 
 Once the lists are interlaced, use the `RGBToTextList` function to parse the raw values for each text display into a **text list**. Note: the width and height provided to this function must be halved because the 3 large value lists were divided into 12 smaller lists during interlacing.
 
